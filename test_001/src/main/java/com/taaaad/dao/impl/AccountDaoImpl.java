@@ -54,7 +54,7 @@ public class AccountDaoImpl implements IAccountDao {
 
     public void deleteAccount(Integer id) {
         try {
-            queryRunner.update("delete account where id = ?", id);
+            queryRunner.update("delete from account where id = ?", id);
         } catch (SQLException e) {
             e.printStackTrace();
         }
