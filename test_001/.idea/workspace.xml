@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89b5fee8-e919-4273-9b69-2ff5622363c6" name="Default Changelist" comment="新建基础业务类">
+      <change afterPath="$PROJECT_DIR$/../test001_spring_ann/src/main/resources/JDBCConfig.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test001_spring_ann/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test001_spring_ann/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test001_spring_ann/src/main/java/config/JDBCConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test001_spring_ann/src/main/java/config/JDBCConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test001_spring_ann/src/main/java/config/SpringConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test001_spring_ann/src/main/java/config/SpringConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test001_spring_ann/src/test/java/com/taaaad/test/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test001_spring_ann/src/test/java/com/taaaad/test/AccountServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/taaaad/dao/impl/AccountDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taaaad/dao/impl/AccountDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bean.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/taaaad/test/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/taaaad/test/AccountServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AccountServiceTest.testdelete">
+  <component name="RunManager" selected="JUnit.AccountServiceTest.testFindAll">
     <configuration name="AccountServiceTest.testFindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test_001" />
       <extension name="coverage">
@@ -137,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountServiceTest.testFindAll" />
         <item itemvalue="JUnit.AccountServiceTest.testdelete" />
         <item itemvalue="JUnit.AccountServiceTest.testUpdate" />
         <item itemvalue="JUnit.AccountServiceTest.testSave" />
         <item itemvalue="JUnit.AccountServiceTest.testFindOne" />
-        <item itemvalue="JUnit.AccountServiceTest.testFindAll" />
       </list>
     </recent_temporary>
   </component>
@@ -157,6 +165,7 @@
       <updated>1568720833087</updated>
       <workItem from="1568720835881" duration="4224000" />
       <workItem from="1568804345716" duration="1608000" />
+      <workItem from="1568822668046" duration="290000" />
     </task>
     <servers />
   </component>

@@ -34,11 +34,18 @@ import java.util.logging.Logger;
  * import
  *      作用： 导入其他配置类
  *      属性：使用 import 注解之后，有 import 的类就是主配置类 而导入的都是子配置
+ *
+ * PropertySource
+ *      作用：用于制定 Properties 文件的位置
+ *      属性：
+ *          value 指定文件的名称和路径
+ *          关键字： classpath 表示类路径
  */
 
 //@Configuration
 @ComponentScan(basePackages = "com.taaaad")
 @Import(JDBCConfig.class)
+@PropertySource("classpath:JDBCConfig.properties")
 public class SpringConfiguration {
 
 
