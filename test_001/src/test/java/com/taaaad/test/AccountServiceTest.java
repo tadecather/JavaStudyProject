@@ -24,6 +24,15 @@ public class AccountServiceTest {
     private IAccountService as;
 
 
+    /**
+     * 测试转账功能
+     */
+    @Test
+    public void testTransfer(){
+        as.transfer("aaa", "bbb", 100f);
+    }
+
+
     @Test
     public void testFindAll() {
 
@@ -65,9 +74,7 @@ public class AccountServiceTest {
     }
 
     @Test
-    public void testdelete() {
-
-
+    public void testDelete() {
         as.deleteAccount(1);
     }
 }
