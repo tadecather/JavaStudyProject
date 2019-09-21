@@ -13,11 +13,6 @@ import java.util.List;
 public class AccountServiceImpl implements IAccountService {
 
     private IAccountDao accountDao;
-    private TransactionManager txManager;
-
-    public void setTransactionManager(TransactionManager txManager) {
-        this.txManager = txManager;
-    }
 
     public void setAccountDao(IAccountDao accountDao) {
         this.accountDao = accountDao;
@@ -41,10 +36,10 @@ public class AccountServiceImpl implements IAccountService {
 
     public void deleteAccount(Integer accountId) {
         accountDao.deleteAccount(accountId);
-
     }
 
     public void transfer(String sourceName, String targetName, float money) {
+        System.out.println("Transfer Begin!!!");
 
         // 2.1 根据名称查询转出账户
         Account source = accountDao.findAccountByName(sourceName);
@@ -58,7 +53,7 @@ public class AccountServiceImpl implements IAccountService {
         accountDao.updateAccount(source);
 
         // 出错 体现事务
-        int i = 1 / 10;
+//        int i = 1 / 0;
 
         // 2.6 更新转入账户
         accountDao.updateAccount(target);

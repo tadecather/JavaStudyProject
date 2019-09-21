@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89b5fee8-e919-4273-9b69-2ff5622363c6" name="Default Changelist" comment="新建基础业务类">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taaaad/factory/BeanFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taaaad/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taaaad/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taaaad/service/impl/AccountServiceImpl_OLD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taaaad/service/impl/AccountServiceImpl_OLD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bean.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/taaaad/test/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/taaaad/test/AccountServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +67,9 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.taaaad" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.taaaad.service.impl" />
     </key>
@@ -193,6 +202,7 @@
       <workItem from="1568822668046" duration="290000" />
       <workItem from="1569053804680" duration="6922000" />
       <workItem from="1569066268574" duration="92000" />
+      <workItem from="1569070513871" duration="1568000" />
     </task>
     <servers />
   </component>

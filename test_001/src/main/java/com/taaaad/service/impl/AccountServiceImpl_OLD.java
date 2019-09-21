@@ -131,7 +131,7 @@ public class AccountServiceImpl_OLD implements IAccountService {
             accountDao.updateAccount(source);
 
             // 出错 体现事务
-            int i = 1 / 10;
+//            int i = 1 / 0;
 
             // 2.6 更新转入账户
             accountDao.updateAccount(target);
