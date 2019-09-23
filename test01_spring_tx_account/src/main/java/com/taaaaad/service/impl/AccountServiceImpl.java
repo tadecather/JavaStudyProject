@@ -24,8 +24,14 @@ public class AccountServiceImpl implements IAccountService {
         this.accountDao = accountDao;
     }
 
-    public Account findAccountById(Integer accountId) {
-        return accountDao.findAccountById(accountId);
+    public Account findAccountById(final Integer accountId) {
+
+        return transactionTemplate.execute(new TransactionCallback<Account>() {
+            public Account doInTransaction(TransactionStatus transactionStatus) {
+                return accountDao.findAccountById(accountId);
+            }
+        });
+        
     }
 
     public void transfer(final String sourceName, final String targetName, final Float money) {
