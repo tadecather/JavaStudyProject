@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 配置 properties
+    可以在标签内部配置连接数据源的信息，也可以通过属性引用外部配置文件信息
+    Resource 属性：常用属性
+        用于指定配置文件的位u置是按照类路径的写法来写并且必须存在于类路径下
+    url 属性：
+        按照 url 写法来写
+        URL: Uniform Resource Location 统一资源定位符，可以唯一标识一个文件的位置
+        URI: Uniform Resource Identifier 统一资源标识符，在应用中可以唯一定位一个资源
+        写法： 协议 主机 端口 URI
+              http://localhost:8080/mybatis/serlet
+        url="file:///Users/liubin/JAVA/JavaStudyProject/Mybatis/Mybatis_05/src/main/resources/jdbcConfig.properties"
+    -->
+    <properties resource="jdbcConfig.properties">
+        <!--<property name="driver" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/worktest"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root1234"/> -->
+    </properties>
+
+    <!-- 使用 typeAliases 配置别名只能配置domian 中类名 -->
+    <typeAliases>
+        <!-- typeAlias 配置别名 type 属性指定类的全限定类名 alias 指定别名，一旦指定别名，就不再区分大小写
+
+        package 标签指定要噢诶之别名的包 当指定之后，该类下的所有实体类都会注册别名，并且类名就是别名，不再区分大小写
+        <typeAlias type="com.taaaaad.domain.User" alias="user"></typeAlias>-->
+        <package name="com.taaaaad.domain"/>
+    </typeAliases>
+
+    <!--配置环境-->
+    <environments default="mysql">
+        <!-- 配置MySQL 环境-->
+        <environment id="mysql">
+            <!-- 配置事务 -->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--配置数据库连接 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!-- 配置映射文件内容 -->
+    <mappers>
+        <!--mapper resource="com/taaaaad/dao/IUserDao.xml"></mapper>
+        package 用于指定 dao 接口所在的包, 当指定了之后，就不需要再写 mapper 以及 resource 或者 class 了
+        -->
+        <package name="com.taaaaad.dao"/>
+    </mappers>
+</configuration>
