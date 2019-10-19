@@ -12,6 +12,8 @@
 </head>
 <body>
     <h3>入门程序</h3>
-    <a href="hello">入门程序</a>
+<%--    <a href="User/hello">入门程序</a>--%>
+
+    <a href="User/testRequestMapping?username=haha" >RequestMapping注解</a>
 </body>
 </html>
