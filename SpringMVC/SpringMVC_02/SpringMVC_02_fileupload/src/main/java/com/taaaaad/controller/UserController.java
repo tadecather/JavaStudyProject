@@ -1,5 +1,7 @@
 package com.taaaaad.controller;
 
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.WebResource;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
@@ -94,6 +96,32 @@ public class UserController {
         System.out.println(path);
         upload.transferTo(new File(path, fileName));
         
+        return "success";
+    }
+
+    @RequestMapping("/fileUpload3")
+    public String fileUpload3(MultipartFile upload) throws Exception {
+        System.out.println("跨服务器上传....");
+
+        // 定义上传文件服务器路径
+        String path = "http://localhost:9090/fileuploadserver_war/uploads/";
+
+        // 上传文件项
+        // 获取到文件上传名称
+        String fileName = upload.getOriginalFilename();
+        // 把文件名设置为唯一值
+        String uuid = UUID.randomUUID().toString().replace("-", "");
+        fileName = uuid + "_" + fileName;
+        // 完成文件上传
+//        System.out.println(path);
+
+        // 创建客户端对象
+        Client client = Client.create();
+        // 和图片服务器进行连接
+        WebResource resource = client.resource(path + fileName);
+        // 上传文件
+        resource.put(upload.getBytes());
+
         return "success";
     }
 
